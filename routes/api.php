@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Route;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -16,3 +16,10 @@ use Illuminate\Http\Request;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+
+Route::any('getQuantities', 'ConvertApiController@getQuantities');
+
+Route::any('convert', 'ConvertApiController@convert');
+
+Route::any('getCompatibleUnits/{unit}', 'ConvertApiController@getCompatibleUnits');
