@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4a8aab65a76f2c3d331a4719e4ef1fe6",
+    "content-hash": "f063c169cc29ff43eb2764b41df652a8",
     "packages": [
         {
             "name": "dnoegel/php-xdg-base-dir",
@@ -947,13 +947,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/olifolkerd/convertor.git",
-                "reference": "4487800116055a865c2e3245439d75fd4f6380a8"
+                "url": "https://github.com/shojaeix/convertor.git",
+                "reference": "dc76319e61ba5b4ff018c0e9c7626a28e1915340"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/olifolkerd/convertor/zipball/4487800116055a865c2e3245439d75fd4f6380a8",
-                "reference": "4487800116055a865c2e3245439d75fd4f6380a8",
+                "url": "https://api.github.com/repos/shojaeix/convertor/zipball/dc76319e61ba5b4ff018c0e9c7626a28e1915340",
+                "reference": "dc76319e61ba5b4ff018c0e9c7626a28e1915340",
                 "shasum": ""
             },
             "require-dev": {
@@ -976,10 +976,9 @@
             ],
             "description": "An easy to use PHP unit conversion library.",
             "support": {
-                "source": "https://github.com/olifolkerd/convertor/tree/master",
-                "issues": "https://github.com/olifolkerd/convertor/issues"
+                "source": "https://github.com/shojaeix/convertor/tree/master"
             },
-            "time": "2018-04-02T16:26:04+00:00"
+            "time": "2019-05-19T11:35:48+00:00"
         },
         {
             "name": "opis/closure",

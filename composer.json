@@ -63,7 +63,7 @@
     "repositories": [
         {
             "type": "vcs",
-            "url": "https://github.com/olifolkerd/convertor"
+            "url": "https://github.com/shojaeix/convertor"
         }
     ]
 }
