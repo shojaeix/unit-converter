@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\ConvertHelper;
 use App\Helpers\ConvertorEx;
 use Illuminate\Http\Request;
 use Olifolkerd\Convertor\Convertor;
@@ -29,23 +30,18 @@ class ConvertApiController extends Controller
 
     function getQuantities()
     {
-        $quantities = [];
-        $convertor = new ConvertorEx;
-        $units = $convertor->getAllUnits();
-        foreach ($units as $key=>$values){
-            if(!isset($quantities[$values['base']])) $quantities[$values['base']] = [];
-
-            $quantities[$values['base']][$key] = $values;
-        }
-
-        return $quantities;
+        return ConvertHelper::getQuantities();
     }
 
     function getCompatibleUnits($unit){
-
-        foreach ($this->quantities as $values){
-            if(isset($values['units']) and in_array($unit, array_keys($values['units'])))
-                return $values['units'];
+        $quantities = ConvertHelper::getQuantities();
+        /*
+         از آنجایی که آرایه واحد های اندازه گیری، بر اساس کمیت دسته بندی شده است
+         واحد $unit در هر دسته بندی ای که باشد،‌ با کل آن دسته بندی سازگار است
+         */
+        foreach ($quantities as $values){
+            if(in_array($unit, array_keys($values)))
+                return $values;
         }
         return [];
     }
