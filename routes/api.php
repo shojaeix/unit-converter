@@ -20,6 +20,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::any('getQuantities', 'ConvertApiController@getQuantities');
 
+
 Route::any('convert', 'ConvertApiController@convert');
 
 Route::any('getCompatibleUnits/{unit}', 'ConvertApiController@getCompatibleUnits');

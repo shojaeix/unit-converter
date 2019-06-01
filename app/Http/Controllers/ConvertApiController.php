@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Helpers\ConvertHelper;
-use App\Helpers\ConvertorEx;
 use Illuminate\Http\Request;
 use Olifolkerd\Convertor\Convertor;
 use Olifolkerd\Convertor\Exceptions\ConvertorDifferentTypeException;
@@ -57,6 +57,7 @@ class ConvertApiController extends Controller
         ]);
         $successful = false;
         // convert values
+
         try {
             $converter = new Convertor($parameters['value'], $parameters['first_unit']);
             $convertedValue = $converter->to($parameters['second_unit']);
@@ -67,6 +68,7 @@ class ConvertApiController extends Controller
             $errorDescription = 'واحد های وارد شده از کمیت های مختلف هستند.';
         }
         // create result array
+
         $result = [
             'successful' => $successful,
         ];
